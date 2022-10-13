@@ -1,7 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
 
 body {
-  	background-color: #ffffff;
+  	background-color: #3a3a3a;
   	font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 14px;
@@ -25,9 +25,15 @@ body {
 
 /* Titles */
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5 {
 	font-family: 'Montserrat', sans-serif;
     font-weight: 700;
+    color: #333;
+}
+
+h6 {
+	font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
     color: #333;
 }
 
@@ -49,6 +55,15 @@ p {
     text-align: center;
 }
 
+.movie-detail span{
+    background-color: #2e2e2e;
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    font-weight: bold;
+	height: 38px;
+	font-size: 20px;
+}
+
 /* Links */
 
 hr {
@@ -66,8 +81,8 @@ hr {
 }
 
 .navbar-inverse {
-	padding-bottom: 35px;
-	padding-top: 35px;
+	padding-bottom: 20px;
+	padding-top: 20px;
 }
 
 .navbar-inverse {

@@ -30,14 +30,14 @@ function showMovieData(data) {
             `
                 <div class="row">
                     <div class="col">
-                        <div class="card mb-4">
+                        <div class="card mb-4" style="background-color:#b3b3b3">
                             <img src="${`https://image.tmdb.org/t/p/w500` + poster_path}">
                             <div class="card-body">
-                                <div class="d-flex justify-content-between">
+                                <div class="d-flex justify-content-between movie-detail">
                                     <b><h5>${title}</h5></b>
-                                    <h5 style="color:#138808"><b>${vote_average}</b></h5>
+                                    <span style="color:#${setRatingColor(vote_average)}"><b>${vote_average}</b></span>
                                 </div>
-                                <p>${release_date}</p>
+                                <h6>${release_date}</h6>
                             </div>
                         </div>
                     </div>
@@ -57,3 +57,13 @@ searchContainer.addEventListener('submit', (element) => {
         getMovieData(SEARCH_API_URL + '&query=' + SEARCH_KEY + '&page=1')
     }
 })
+
+function setRatingColor(vote_average){
+    if (vote_average >= 7.5){
+        return '14df02'
+    }else if (vote_average >= 5){
+        return 'ce9b11'
+    }else {
+        return 'd10000'
+    }
+}
